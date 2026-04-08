@@ -31,5 +31,8 @@ def main():
         response = chat_with_groq(user_input)
         print(f"Groq: {response}")
 
+    for message in conversation_history:
+        print(f"{message['role'].capitalize()}: {message['content']}")
+
 if __name__ == "__main__":
     main()
